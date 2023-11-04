@@ -41,6 +41,9 @@
   nix.settings.trusted-users = [ "root" "@wheel" ];
 
   security.sudo.wheelNeedsPassword = false;
+  security.sudo.extraConfig = ''
+    Defaults lecture = never
+  '';
 
   # Enable SSH everywhere
   services.openssh.enable = true;
